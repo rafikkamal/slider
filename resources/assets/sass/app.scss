@@ -1,0 +1,221 @@
+// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+$myProductSlider_Height : 500px;
+$myProductSlider_Height_Header : 50px;
+$myProductSlider_Height_Main : $myProductSlider_Height -$myProductSlider_Height_Header;
+
+body,html{
+    height:100%;
+    position: relative;
+}
+body{
+    background: none;
+    //text-align: center;
+}
+.my-product-slider-row{
+    height:$myProductSlider_Height+20px;
+    overflow: hidden;
+    padding-left: 0px;
+    padding-right: 0px;
+    //z-index:400;
+    //position:relative;
+}
+.my-product-slider{
+    background:darken(#ffffff,5);
+    height:$myProductSlider_Height;
+    //padding-left:0px;
+    //padding-right:0px;
+}
+.my-product-slider-header-container{
+    height:$myProductSlider_Height_Header;
+}
+.my-product-slider-title{
+    margin-top:10px;
+}
+.my-product-slider-title > span{
+    font-size: 20px;
+    padding-top:35px;
+    padding-left:15px;
+}
+.my-product-slider-nav > button{
+    float:right;
+    margin:5px 5px;
+}
+.my-product-slider-main-container{
+    width:3*100%;
+    background: darken(#ffffff,0);
+    height:$myProductSlider_Height_Main;
+    overflow: hidden;
+    padding-left:15px;
+}
+.my-product-slider-container{
+    height:$myProductSlider_Height_Main;
+}
+.my-product-slider-container-main{
+    height:$myProductSlider_Height_Main;
+}
+.my-product-slider-container-item{
+    border-right: 1px solid darken(#ffffff,10);
+}
+.my-product-slider-container-item:nth-child(4){
+    border:none;
+}
+.product-img{
+    width:100%;
+    height:200px;
+    margin-top:10px;
+}
+.my-product-slider-container-item-title{
+    height:40px;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+.my-product-slider-container-item-title > span{
+    font-size: 16px;
+    color:deepskyblue;
+    background: none;
+}
+.my-product-slider-container-item-details{
+    height:100px;
+    background: none;
+    font-size: 11px;
+    padding-left: 5px;
+    color:lightslategrey;
+}
+.my-product-slider-container-item-footer{
+    height:30px;
+}
+.my-product-slider-container-item-cart{
+    float:left;
+    width:50%;
+    text-align: center;
+    height:0px;
+    visibility: hidden;
+}
+.my-product-slider-container-item-price{
+    float:right;
+    width:50%;
+    text-align: center;
+}
+.my-product-slider-container-item-price > span{
+    font-size: 20px;
+    color:blueviolet;
+}
+/*.my-product-slider-container-item-cart:hover{
+    transform: rotateY(180deg);
+}*/
+.my-product-slider-container-item-ratings{
+    float:left;
+    width:50%;
+    font-size: 18px;
+    text-align: center;
+    margin-top:2px;
+    color:goldenrod;
+}
+.my-product-slider-container-item-ratings:hover{
+    cursor: pointer;
+    color:red;
+}
+
+@media screen and (max-width: 992px) {
+    .product-img{
+        height:125px;
+    }
+    .my-product-slider-container-item-title{
+        margin-bottom: 10px;
+        margin-top: 0px;
+        height:45px;
+    }
+    .my-product-slider-container-item-title > span{
+        font-size: 12px;
+        font-weight: bold;
+    }
+    .my-product-slider-container-item-details{
+        font-size: 10px;
+    }
+    .my-product-slider-container-item-price > span{
+        font-size: 13px;
+        font-weight: bold;
+    }
+    .my-product-slider-container-item-ratings{
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .my-product-slider-header-container{
+        margin-bottom: 50px;
+    }
+    .my-product-slider-row{
+        height:1600px;
+    }
+    .my-product-slider-main-container{
+        overflow:visible;
+    }
+    .my-product-slider-container{
+        width:50%;
+    }
+    .my-product-slider-container-main{
+        width:32%;
+    }
+    .my-product-slider-container{
+        height:1600px;
+        overflow: visible;
+    }
+}
+@media screen and (max-width: 306px) {
+    .my-product-slider-container{
+        width:100%;
+    }
+    .my-product-slider-container-item{
+        border-right: none;
+        margin-left:20px;
+    }
+}
+
+/* navbar */
+.nav,.navbar-inverse{
+    background: blueviolet;
+    border-color: blueviolet;
+    border-radius: 0;
+}
+//very important part
+.navbar-div-option-display-container{
+    //for this 2 lines the whole css underneath works
+    //comment them out to check the outcome
+    //height:0px;
+    visibility:hidden;
+}
+//very important part
+.navbar-div-option-1,.navbar-div-option-2,.navbar-div-option-3{
+    z-index:500;//for this line the code changes
+    position:absolute;
+    height:0px;
+    visibility:hidden;
+}
+.navbar-div-option-1{
+    background: blueviolet;
+}
+.navbar-div-option-2{
+    background: #7f7fbf;
+}
+.navbar-div-option-3{
+    background: #323299;
+}
+.navbar-div-option-display-container ul{
+    list-style-type: none;
+}
+.navbar-div-option-display-container h3{
+    font-size:15px;
+    color:white;
+}
+.navbar-div-option-display-container li{
+    font-size:12px;
+    margin-left:-10px;
+}
+.navbar-div-option-display-container a{
+    color:white;
+}
+.navbar-div-option-display-container a:hover{
+    margin-left:5px;
+    text-decoration: none;
+}
